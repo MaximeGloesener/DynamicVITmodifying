@@ -1,0 +1,10 @@
+python benchmark_models.py deit-s fine_tuned_model/deiT_small_patch16_224.ckpt prune_model/DeiT-s/DeiT_s_70.pth
+python benchmark_models.py vit_b_16 fine_tuned_model/vit_base_patch16_224.ckpt prune_model/Vit_b_16/Vit_b_16_70.pth
+
+
+
+
+
+
+
+python benchmark_models.py deit-s fine_tuned_model/deit_small_patch16_224-cd65a155.pth fine_tuned_model/dynamic-vit_384_r0.7.pth

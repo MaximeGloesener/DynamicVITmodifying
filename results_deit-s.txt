@@ -1,0 +1,4 @@
+Base Model Results:
+{'num_parameters': 21667204, 'model_size': 693350528, 'num_macs': 4603185288.0, 'max_memory_used': 252.269056, 'current_memory_used': 134.248448, 'fps_cpu': None, 'fps_gpu': 2279.60494082676, 'std_cpu': None, 'std_gpu': 0.5826853985666994, 'total_emissions': 4.951497802316148e-05, 'total_energy_consumed': 0.00035852620086716444, 'average_emissions_per_inference': 2.475748901158074e-07, 'average_energy_per_inference': 1.7926310043358221e-06}
+Pruned Model Results:
+{'num_parameters': 22390954, 'model_size': 716510528, 'num_macs': 2983234433.15625, 'max_memory_used': 332.909056, 'current_memory_used': 224.209408, 'fps_cpu': None, 'fps_gpu': 3457.574346658642, 'std_cpu': None, 'std_gpu': 0.4122492641810979, 'total_emissions': 3.2762534199810786e-05, 'total_energy_consumed': 0.00023722573222074758, 'average_emissions_per_inference': 1.6381267099905393e-07, 'average_energy_per_inference': 1.1861286611037379e-06}

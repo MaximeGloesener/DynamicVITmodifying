@@ -1,3 +1,5 @@
+FORKED FROM [https://github.com/raoyongming/DynamicViT](https://github.com/raoyongming/DynamicViT) !!!
+
 # Efficient Vision Transformers and CNNs with Dynamic Spatial Sparsification
 
 This repository contains PyTorch implementation for DynamicViT (NeurIPS 2021).
@@ -8,7 +10,7 @@ This repository contains PyTorch implementation for DynamicViT (NeurIPS 2021).
 
 ### 🔥Updates
 
-We extend our method to more **network architectures** (i.e., ConvNeXt and Swin Transformers) and more **tasks** (i.e., object detection and semantic segmentation) with an improved ***dynamic spatial sparsification*** framework. Please refer to the extended version of our paper for details. The extended version has been accepted by T-PAMI. 
+We extend our method to more **network architectures** (i.e., ConvNeXt and Swin Transformers) and more **tasks** (i.e., object detection and semantic segmentation) with an improved ***dynamic spatial sparsification*** framework. Please refer to the extended version of our paper for details. The extended version has been accepted by T-PAMI.
 
 [[arXiv (T-PAMI, Journal Version)]](https://arxiv.org/abs/2207.01580)
 
@@ -93,7 +95,7 @@ We provide our DynamicViT models pretrained on ImageNet:
 
 ### Demo
 
-You can try DynamicViT on Colab [![][colab]][colab-dynamicvit]. Thank [@dirtycomputer](https://github.com/dirtycomputer) for the contribution.  
+You can try DynamicViT on Colab [![][colab]][colab-dynamicvit]. Thank [@dirtycomputer](https://github.com/dirtycomputer) for the contribution.
 
 [colab]: <https://colab.research.google.com/assets/colab-badge.svg>
 [colab-dynamicvit]: <https://colab.research.google.com/github/raoyongming/DynamicViT/blob/master/colab_demo.ipynb>
@@ -111,7 +113,7 @@ To evaluate a pre-trained DynamicViT model on the ImageNet validation set with a
 
 ```
 python infer.py --data_path /path/to/ILSVRC2012/ --model model_name \
---model_path /path/to/model --base_rate 0.7 
+--model_path /path/to/model --base_rate 0.7
 ```
 
 
@@ -149,7 +151,7 @@ DynamicViT can also achieve comparable performance with only 15 epochs training 
 
 **ConvNeXt-T**
 
-Train on 8 GPUs: 
+Train on 8 GPUs:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --output_dir logs/dynamic_conv-t --model convnext-t --input_size 224 --batch_size 128 --data_path /path/to/ILSVRC2012/ --epochs 120 --base_rate 0.7 --lr 4e-3 --drop_path 0.2 --update_freq 4 --lr_scale 0.2
@@ -163,7 +165,7 @@ python run_with_submitit.py --nodes 4 --ngpus 8 --output_dir logs/dynamic_conv-t
 
 **ConvNeXt-S**
 
-Train on 8 GPUs: 
+Train on 8 GPUs:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --output_dir logs/dynamic_conv-s --model convnext-s --input_size 224 --batch_size 128 --data_path /path/to/ILSVRC2012/ --epochs 120 --base_rate 0.7 --lr 4e-3 --drop_path 0.2 --update_freq 4 --lr_scale 0.2
@@ -177,7 +179,7 @@ python run_with_submitit.py --nodes 4 --ngpus 8 --output_dir logs/dynamic_conv-s
 
 **ConvNeXt-B**
 
-Train on 8 GPUs: 
+Train on 8 GPUs:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --output_dir logs/dynamic_conv-b --model convnext-b --input_size 224 --batch_size 128 --data_path /path/to/ILSVRC2012/ --epochs 120 --base_rate 0.7 --lr 4e-3 --drop_path 0.5 --update_freq 4 --lr_scale 0.2
@@ -205,7 +207,7 @@ python run_with_submitit.py --nodes 4 --ngpus 8 --output_dir logs/dynamic_swin-t
 
 **Swin-S**
 
-Train on 8 GPUs: 
+Train on 8 GPUs:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --output_dir logs/dynamic_swin-s --model swin-s --input_size 224 --batch_size 128 --data_path /path/to/ILSVRC2012/ --epochs 120 --base_rate 0.7 --lr 4e-3 --drop_path 0.2 --update_freq 4 --lr_scale 0.2
@@ -219,7 +221,7 @@ python run_with_submitit.py --nodes 4 --ngpus 8 --output_dir logs/dynamic_swin-s
 
 **Swin-B**
 
-Train on 8 GPUs: 
+Train on 8 GPUs:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --output_dir logs/dynamic_swin-b --model swin-b --input_size 224 --batch_size 128 --data_path /path/to/ILSVRC2012/ --epochs 120 --base_rate 0.7 --lr 4e-3 --drop_path 0.5 --update_freq 4 --lr_scale 0.2
